@@ -5,6 +5,18 @@ class TodoList
       @title = list_title
       @items = Array.new
     end
+
+    def add_item(new_item)
+      item = Item.new(new_item)
+      @items.push(new_item)
+    end
+
+    def print
+      puts @title
+      puts @items
+    end
+
+
 end
 
 
@@ -16,8 +28,7 @@ class Item
       @completion_status = false
     end
 
-    def add_item(new_item)
-      item = Item.new(new_item)
-      @items.push(item)
-    end
+
+
+    #def delete_item()
 end
