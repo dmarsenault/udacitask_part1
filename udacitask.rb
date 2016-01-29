@@ -10,13 +10,13 @@ todo_list.add_item("Go to Target")
 # Print the list
 todo_list.print
 # Delete the first item
-
+todo_list.delete_item(0)
 # Print the list
-
+todo_list.print
 # Delete the second item
-
+todo_list.delete_item(1)
 # Print the list
-
+todo_list.print
 # Update the completion status of the first item to complete
 
 # Print the list

@@ -11,12 +11,19 @@ class TodoList
       @items.push(new_item)
     end
 
-    def print
-      puts @title
-      puts @items
+    def delete_item(item_id)
+      @items.delete_at(item_id)
     end
 
+    def divider
+      puts "~" * 40
+    end
 
+    def print
+      puts @title
+      puts divider
+      puts @items
+    end
 end
 
 
@@ -27,8 +34,4 @@ class Item
       @description = item_description
       @completion_status = false
     end
-
-
-
-    #def delete_item()
 end
