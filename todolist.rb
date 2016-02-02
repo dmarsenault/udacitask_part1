@@ -6,9 +6,13 @@ class TodoList
       @items = Array.new
     end
 
+    def update_title(new_title)
+      @title = new_title
+    end
+
     def add_item(new_item)
       item = Item.new(new_item)
-      @items.push(new_item)
+      @items.push(item)
     end
 
     def delete_item(item_id)
@@ -19,10 +23,20 @@ class TodoList
       puts "~" * 40
     end
 
-    def print
+    def print_description
+      @items.each do |description|
+        description.print_items
+      end
+    end
+
+    def toggle_completion(item_id)
+      @items.at(item_id).toggle_status
+    end
+
+    def print_list
       puts @title
       puts divider
-      puts @items
+      puts print_description
     end
 end
 
@@ -32,6 +46,15 @@ class Item
 
     def initialize(item_description)
       @description = item_description
-      @completion_status = false
+      @completion_status = "( )"
     end
+
+    def toggle_status
+      @completion_status = "(X)"
+    end
+
+    def print_items
+      puts "#{@completion_status} ----- #{@description}"
+    end
+
 end
