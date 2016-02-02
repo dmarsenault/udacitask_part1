@@ -20,7 +20,7 @@ class TodoList
     end
 
     def divider
-      puts "~" * 40
+      print "~" * 40
     end
 
     def print_description
@@ -34,6 +34,7 @@ class TodoList
     end
 
     def print_list
+      puts " "
       puts @title
       puts divider
       puts print_description

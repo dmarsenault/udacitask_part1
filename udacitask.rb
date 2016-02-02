@@ -1,7 +1,12 @@
 require_relative 'todolist.rb'
 
 # Creates a new todo list
-todo_list = TodoList.new("David's List")
+todo_list = TodoList.new("
+,-.              . p       ,          .
+|  |         o   |         |    o     |
+|  | ,-: . , . ,-|   ,-.   |    . ,-. |-
+|  / | | |/  | | |   `-.   |    | `-. |
+`-'  `-` '   ' `-'   `-'   `--' ' `-' `-'")
 # Add four new items
 todo_list.add_item("Learn Ruby")
 todo_list.add_item("Make dinner")
@@ -22,6 +27,11 @@ todo_list.toggle_completion(0)
 # Print the list
 todo_list.print_list
 # Update the title of the list
-todo_list.update_title("David's To-Do List")
+todo_list.update_title("
+,-.              . p       ,---.           .       ,          .
+|  |         o   |           |             |       |    o     |  
+|  | ,-: . , . ,-|   ,-.     |   ,-. --- ,-| ,-.   |    . ,-. |-
+|  / | | |/  | | |   `-.     |   | |     | | | |   |    | `-. |
+`-'  `-` '   ' `-'   `-'     '   `-'     `-' `-'   `--' ' `-' `-'")
 # Print the list
 todo_list.print_list
