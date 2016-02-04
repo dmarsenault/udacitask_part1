@@ -32,6 +32,11 @@ class TodoList
       @items.at(item_id).toggle_status
     end
 
+    # Uses toggle_importance to mark an item in list as important
+    def toggle_important(item_id)
+      @items.at(item_id).toggle_importance
+    end
+
     # Outputs the total number of tasks on the list.
     def total_list
       @items.length
@@ -49,11 +54,17 @@ end
 
 
 class Item
-    attr_reader :description, :completion_status
+    attr_reader :description, :completion_status, :important
 
     def initialize(item_description)
       @description = item_description
       @completion_status = "( )"
+      @important = "(   )"
+    end
+
+    # Allows user to add explanation points to indicate important task
+    def toggle_importance
+      @important = "(!!!)"
     end
 
     # Changes completion from ( ) to (X)
@@ -61,8 +72,17 @@ class Item
       @completion_status = "(X)"
     end
 
+    # Allows user to modify the description
+    def modify_description(new_description)
+      @description = new_description
+    end
+
+    def completed?
+      @completion_status = false || true
+    end
+
     # Allows list to print both completion status and item description
     def print_items
-      puts "#{@completion_status} ~~~~ #{@description}"
+      puts "#{@completion_status}#{@important} ~~~~ #{@description}"
     end
 end

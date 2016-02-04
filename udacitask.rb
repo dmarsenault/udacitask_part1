@@ -29,9 +29,10 @@ todo_list.print_list
 # Update the title of the list
 todo_list.update_title("
 ,-.              . p       ,---.           .       ,          .
-|  |         o   |           |             |       |    o     |  
+|  |         o   |           |             |       |    o     |
 |  | ,-: . , . ,-|   ,-.     |   ,-. --- ,-| ,-.   |    . ,-. |-
 |  / | | |/  | | |   `-.     |   | |     | | | |   |    | `-. |
 `-'  `-` '   ' `-'   `-'     '   `-'     `-' `-'   `--' ' `-' `-'")
+todo_list.toggle_important(1)
 # Print the list
 todo_list.print_list

@@ -1,0 +1,7 @@
+1) Added a "Total tasks" column to sum the total amount of items on the to-do list.
+
+2) Added a "modify_description" variable to allow the user to update the description
+of an item if needed.
+
+3) Added a bubble and toggle to allow user to mark an item as important (indicated
+by !!!).  This is shown in the last listing of the output.
